@@ -1,6 +1,6 @@
 var cars = ["Porsche", "BMW", "Ford", "Audi", "Subaru", "Mclaren", "Chevrolet"];
 
-// Add buttons for original car array
+
 function renderButtons() {
     $("#car-buttons").empty();
     for (i = 0; i < cars.length; i++) {
@@ -12,7 +12,7 @@ renderButtons();
 
 
 
-// Getting gifs from api... onto html
+
 $("button").on("click", function () {
     var car = $(this).attr("data-car");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + car + "&api_key=L0iakG5CnfxMVemWFG2OAufbs2Lyl7SW&limit=3"
@@ -67,3 +67,4 @@ function changeState() {
 
 
 $(document).on("click", ".gif", changeState);
+// $(document).on("click", ".btn", cars);---------->page doesn't work when adding new button to array and clicking.
